@@ -55,3 +55,7 @@ logs/*.log
 
 # todo
 todo.txt
+
+# Personal finance daily runner
+.horizon-daily.lock
+logs/

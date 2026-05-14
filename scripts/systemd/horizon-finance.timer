@@ -1,0 +1,15 @@
+[Unit]
+Description=Run horizon-finance.service every morning at 08:30 local
+Documentation=https://github.com/KevinKDA-Resources/Horizon
+
+[Timer]
+# 08:30 every day, local time. Change here if you want a different slot.
+OnCalendar=*-*-* 08:30:00
+# Accuracy +/- 5 min; lets systemd batch wakeups with other timers.
+AccuracySec=5min
+# If the laptop was off at 08:30, run as soon as it's back up.
+Persistent=true
+Unit=horizon-finance.service
+
+[Install]
+WantedBy=timers.target
